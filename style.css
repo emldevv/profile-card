@@ -1,0 +1,95 @@
+/* Reset properties */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+main,
+h1, h2, h3,
+p {
+    margin: 0;
+}
+
+  
+/* Custom Properties */
+  :root {
+    --primary-clr-dc: hsl(185, 75%, 39%);         /* Very dark blue */
+    --primary-clr-vdsb: hsl(229, 23%, 23%);        /* Very dark saturated blue */
+    --primary-dgb: hsl(227, 10%, 46%);         /* Dar grey-ish blue */
+
+    --neutral-dg: hsl(0, 0%, 59%);              /* Dark grey*/
+  
+    --spacer: 1rem;
+    --spacer-md: calc(var(--spacer) * 2);
+    --spacer-lg: calc(var(--spacer) * 3);
+    
+    --shadow: 0 0 1em rgba(0,0,0, .25);
+    --br: 5px;
+    
+    font-size: 10px;
+    --fs-0: 3.8rem;
+    --fs-1: 3.2rem;
+    --fs-2: 2.8rem;                                       /* fs = font size */
+    --fs-3: 2.6rem;
+    --fs-4: 2.2rem;
+    --fs-p: 1.8rem;
+
+    --ff: 'Kumbh Sans', sans-serif;
+    --fw-n: 400;
+    --fw-b: 700;
+  }
+
+
+/* General styles */
+
+
+/* General typography */
+h2,
+p {
+    font-family: var(--ff);
+}
+
+.font-bold {
+    color: var(--primary-clr-vdsb);
+    font-weight: 700;
+}
+
+.font-light {
+    color: var(--neutral-dg);
+}
+h2 {
+    font-size: var(--fs-3);
+}
+p {
+    font-size: var(--fs-p);
+}
+
+/* Main */
+body {
+    background-color: yellow;
+    min-width: 100%;
+    min-height: 100%;
+}
+main {
+    background-color: red;
+
+}
+
+/* Card */
+
+.card {
+    background-color: blue;
+
+    max-width: 80%;
+    min-height: vh100;
+    border-radius: 2em;
+}
+/* Attribution */
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
