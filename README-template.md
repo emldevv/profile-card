@@ -75,6 +75,13 @@ I stumbled on how to position my background circles almost completely by acciden
     background-position: 125% 90%;
 }
 ```
+2. Using frame size constraints on background images makes for terrible responsiveness, as it causes clipping.
+Removed the background image position:absolute size constraints because, if you are using SVG's, you don't need to limit the size of the frame and their backgrounds are usually transparent anyway.
+I deleted the 50px heights on both images and found their frames could overlap without collision. Made for good responsiveness without clipping.
+
+3. z-index is a bit of a maze.
+z-index has a content stacking rule where the element nested inside is the lowest z-index value and therefore furthest back on display. Elements that aren't nested are siblings, and even then, if you apply a z-index property it won't work unless you assign a position:... value to the element.
+Honestly, after playing around with it, I would avoid it and find another, simpler solution.
 
 To see how you can add code snippets, see below:
 
