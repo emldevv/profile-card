@@ -58,7 +58,23 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+1. Position background images were a surprise.
+I stumbled on how to position my background circles almost completely by accident. I thought I'd play around with position and it's default x-axis assignment if you only have one value. Then I entered 2 values, and I was off to the races. I got the postions almost perfect to the example image for mobile. Here's and example:
+```css
+.bg-img-top {
+  /* sets the div to occupy the container fully, then I can adjust it specifically */
+    position: absolute;     
+    top:0px;
+    right:0px;
+    bottom: 50%;
+    left:0px;
+    
+    /* Then I can load in the image, and position both x and y-axis as a percentage */
+    background-image: url(images/bg-pattern-top.svg);
+    background-repeat: no-repeat;
+    background-position: 125% 90%;
+}
+```
 
 To see how you can add code snippets, see below:
 

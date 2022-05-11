@@ -15,11 +15,11 @@ p {
   
 /* Custom Properties */
   :root {
-    --primary-clr-dc: hsl(185, 75%, 39%);         /* Very dark blue */
-    --primary-clr-vdsb: hsl(229, 23%, 23%);        /* Very dark saturated blue */
-    --primary-dgb: hsl(227, 10%, 46%);         /* Dar grey-ish blue */
+    --primary-clr-tdc: sla(185, 75%, 39%);                /* Very dark blue */
+    --primary-clr-vdsb: hsl(229, 23%, 23%);             /* Very dark saturated blue */
+    --primary-clr-dgb: hsl(227, 10%, 46%);              /* Dark grey-ish blue */
 
-    --neutral-dg: hsl(0, 0%, 59%);              /* Dark grey*/
+    --neutral-dg: hsl(0, 0%, 59%);                      /* Dark grey*/
   
     --spacer: 1rem;
     --spacer-md: calc(var(--spacer) * 2);
@@ -67,20 +67,45 @@ p {
 }
 
 /* Main */
-body {
-    background-color: yellow;
-    min-width: 100%;
-    min-height: 100%;
-}
-main {
-    background-color: red;
 
+main {
+    /* background-color: red; */
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+}
+
+.bg-img-top {
+    position: absolute;
+    top:0px;
+    right:0px;
+    bottom: 50%;
+    left:0px;
+    
+    background-image: url(images/bg-pattern-top.svg);
+    background-repeat: no-repeat;
+    background-position: 125% 90%;
+}
+
+.bg-img-bottom {
+    position: absolute;
+    top:50%;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    
+    background-image: url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: -25% 12%;
+    
 }
 
 /* Card */
 
 .card {
-    background-color: blue;
+    /* background-color: blue; */
 
     max-width: 80%;
     min-height: vh100;
